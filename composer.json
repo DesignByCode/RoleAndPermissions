@@ -21,6 +21,8 @@
     "extra": {
         "laravel": {
           "providers": [
+            "Designbycode\\RolesAndPermissions\\Providers\\RolesAndPermissionsServiceProvider",
+            "Designbycode\\RolesAndPermissions\\Providers\\PermissionsServicesProvider"
         ]
       }
   }
