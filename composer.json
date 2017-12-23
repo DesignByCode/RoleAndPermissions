@@ -1,0 +1,32 @@
+{
+    "name": "designbycode/roles-and-permissions",
+    "description": "Laravel Rolers and permissions",
+    "authors": [
+        {
+            "name": "DesignByCode",
+            "email": "claude@designbycode.co.za"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Designbycode\\RolesAndPermissions\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=7.0.0",
+        "illuminate/database": ">=5.0",
+        "illuminate/support": ">=5.0"
+
+    },
+    "extra": {
+        "laravel": {
+          "providers": [
+            "Designbycode\\RolesAndPermissions\\Providers\\RolesAndPermissionaServiceProvider",
+            "Designbycode\\RolesAndPermissions\\Providers\\PermissionsServicesProvider"
+        ]
+      }
+  }
+
+
+
+}
