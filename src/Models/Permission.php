@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Permission extends Model
 {
     
+    protected $fillable = ['name'];
+
     /**
      * Role relationship
      */

@@ -15,7 +15,7 @@ class RolesAndPermissionsServiceProvider extends ServiceProvider
     {
         $this->loadMigrationsFrom(__DIR__ . '/../../migrations');
         $this->publishes([
-            __DIR__ . '../Middleware/RolesMiddleware.php' => app_path('Http/Middleware/RolesMiddleware.php')
+            __DIR__ . '/../Middleware/RolesMiddleware.php' => app_path('Http/Middleware/RolesMiddleware.php')
         ]);
     }
 
