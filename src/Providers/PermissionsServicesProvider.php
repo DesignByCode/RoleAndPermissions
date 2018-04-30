@@ -3,6 +3,7 @@
 namespace Designbycode\RolesAndPermissions\Providers;
 
 use Designbycode\RolesAndPermissions\Models\Permission;
+use Designbycode\RolesAndPermissions\Models\Role;
 use Gate;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
@@ -24,11 +25,11 @@ class PermissionsServicesProvider extends ServiceProvider
             });
         });        
 
-        // Role::get()->map(function ($role) {
-        //     Gate::define($role->name, function ($user) use ($role) {
-        //         return $user->hasRole($role);
-        //     });
-        // });
+        Role::get()->map(function ($role) {
+            Gate::define($role->name, function ($user) use ($role) {
+                return $user->hasRole($role);
+            });
+        });
 
         Blade::directive('role', function ($role) {
             return "<?php if (auth()->check() && auth()->user()->hasRole({$role}) ):  ?>";
